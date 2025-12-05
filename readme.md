@@ -1,5 +1,4 @@
 
-
 ---
 
 # 📄 **README.md — SGHSS VidaPlus**
@@ -132,13 +131,6 @@ Mesmo sendo um protótipo Front-End, o projeto considera:
 
 ---
 
-## 👨‍💻 **Autor**
-
-**Seu Nome**
-Curso: Análise e Desenvolvimento de Sistemas — Uninter
-Disciplina: Desenvolvimento Front-End
-
----
 
 ### ⭐ Se este projeto ajudou você, considere deixar uma estrela no repositório!
 
