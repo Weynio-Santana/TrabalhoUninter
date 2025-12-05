@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleconsulta - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="paciente.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="telemed-body">
+
+    <div class="telemed-container">
+        
+        <header class="telemed-header">
+            <h3>SGHSS VidaPlus</h3>
+            <p>Consulta com <strong>Dra. Ana Souza</strong></p>
+        </header>
+
+        <main class="telemed-video-area">
+            
+            <div class="video-main">
+    <img src="https://placehold.co/800x600/222/FFF?text=Dra.+Ana+Souza" alt="Vídeo do Doutor" class="video-placeholder-main">
+    <span class="video-label">Dra. Ana Souza</span>
+</div>
+
+<div class="video-self">
+    <img src="https://placehold.co/300x200/444/FFF?text=Voce" alt="Seu Vídeo" class="video-placeholder-self">
+    <span class="video-label">Você</span>
+</div>
+
+            <div class="call-status" id="call-status">
+                Conectando...
+            </div>
+
+        </main>
+
+        <footer class="telemed-controls">
+            <button class="control-btn" id="btn-mute">
+                <span>Microfone</span>
+            </button>
+            <button class="control-btn" id="btn-video">
+                <span>Câmera</span>
+            </button>
+            <button class="control-btn btn-hangup" id="btn-hangup">
+                <span>Encerrar</span>
+            </button>
+        </footer>
+
+    </div>
+
+    <script src="paciente.js"></script>
+</body>
+</html>

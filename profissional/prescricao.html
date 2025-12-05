@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emitir Prescrição - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="profissional.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SGHSS VidaPlus</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="agenda.html">Minha Agenda</a></li>
+            <li><a href="#">Buscar Pacientes</a></li>
+            <li><a href="#" class="active">Emitir Prescrição</a></li> <li><a href="#">Laudos Pendentes</a></li>
+            <li><a href="#">Meu Perfil</a></li>
+            <li><a href="../index.html" id="logout-button">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <button id="menu-toggle" class="menu-toggle-button">&#9776;</button>
+            <h1>Emitir Prescrição Digital</h1>
+        </header>
+
+        <div class="patient-header card">
+            <h2>Para: Mariana Almeida</h2>
+            <p>34 anos | ID: P002 | Alergia: Penicilina</p>
+        </div>
+        
+        <div class="prontuario-layout">
+
+            <section class="evolution-column">
+                <div class="card">
+                    <h2>Adicionar Medicamento</h2>
+                    <form id="prescription-form">
+                        
+                        <div class="input-group">
+                            <label for="drug-name">Nome do Medicamento</label>
+                            <input type="text" id="drug-name" list="drug-list" placeholder="Ex: Dipirona" required>
+                            <datalist id="drug-list">
+                                <option value="Dipirona Monoidratada 500mg"></option>
+                                <option value="Amoxicilina 250mg"></option>
+                                <option value="Paracetamol 750mg"></option>
+                                <option value="Losartana 50mg"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="drug-dosage">Posologia (Instruções)</label>
+                            <textarea id="drug-dosage" rows="4" placeholder="Ex: Tomar 1 comprimido de 8 em 8 horas por 7 dias." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Adicionar à Receita</button>
+                    </form>
+                </div>
+            </section>
+            
+            <aside class="summary-column">
+                <div class="card">
+                    <h4>Receituário (Emissão Digital)</h4>
+                    <ul class="prescription-list" id="prescription-list">
+                        <li id="empty-list-msg">Nenhum medicamento adicionado.</li>
+                    </ul>
+                    <hr>
+                    <button id="btn-finalize" class="btn btn-success">Finalizar e Assinar Digitalmente</button>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="profissional.js" id="menu-script"></script> </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="paciente.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SGHSS VidaPlus</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard-paciente.html">Início (Painel)</a></li>
+            <li><a href="#" class="active">Meus Agendamentos</a></li> 
+            <li><a href="historico.html">Histórico Clínico</a></li>
+            <li><a href="#">Resultados de Exames</a></li>
+            <li><a href="teleconsulta.html">Teleconsultas</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+            <li><a href="../index.html" id="logout-button">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <button id="menu-toggle" class="menu-toggle-button">&#9776;</button>
+            <h1>Novo Agendamento</h1>
+        </header>
+
+        <section class="card">
+            <form id="schedule-form">
+                
+                <div id="step-1" class="step-content active-step">
+                    <h2>Etapa 1: Escolha a Especialidade</h2>
+                    <div class="input-group">
+                        <label for="specialty">Especialidade</label>
+                        <select id="specialty" name="specialty">
+                            <option value="">Selecione...</option>
+                            <option value="cardiologia">Cardiologia</option>
+                            <option value="dermatologia">Dermatologia</option>
+                            <option value="clinica-geral">Clínica Geral</option>
+                            <option value="ortopedia">Ortopedia</option>
+                        </select>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-primary" id="btn-next-1">Próximo</button>
+                    </div>
+                </div>
+                
+                <div id="step-2" class="step-content">
+                    <h2>Etapa 2: Escolha o Profissional e Local</h2>
+                    <div class="input-group">
+                        <label for="doctor">Profissional (Cardiologia)</label>
+                        <select id="doctor" name="doctor">
+                            <option value="">Selecione...</option>
+                            <option value="dr-ricardo">Dr. Ricardo Alves</option>
+                            <option value="dra-carla">Dra. Carla Mendes</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="location">Unidade</label>
+                        <select id="location" name="location">
+                            <option value="central">Hospital VidaPlus (Unidade Central)</option>
+                            <option value="telemed">Teleconsulta</option>
+                        </select>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary" id="btn-prev-2">Voltar</button>
+                        <button type="button" class="btn btn-primary" id="btn-next-2">Próximo</button>
+                    </div>
+                </div>
+
+                <div id="step-3" class="step-content">
+                    <h2>Etapa 3: Escolha a Data e Horário</h2>
+                    <div class="input-group">
+                        <label for="date">Data</label>
+                        <input type="date" id="date" name="date" value="2025-11-20">
+                    </div>
+                    <p>Horários disponíveis (simulação):</p>
+                    <div class="time-slots">
+                        <button type="button" class="time-slot" data-time="09:00">09:00</button>
+                        <button type="button" class="time-slot" data-time="09:30">09:30</button>
+                        <button type="button" class="time-slot" data-time="11:00">11:00</button>
+                        <button type="button" class="time-slot" data-time="11:30">11:30</button>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary" id="btn-prev-3">Voltar</button>
+                        <button type="button" class="btn btn-primary" id="btn-next-3">Próximo</button>
+                    </div>
+                </div>
+                
+                <div id="step-4" class="step-content">
+                    <h2>Etapa 4: Confirme seu Agendamento</h2>
+                    <p>Revise os dados da sua consulta:</p>
+                    <ul class="confirmation-summary">
+                        <li><strong>Especialidade:</strong> Cardiologia</li>
+                        <li><strong>Profissional:</strong> Dr. Ricardo Alves</li>
+                        <li><strong>Local:</strong> Hospital VidaPlus (Unidade Central)</li>
+                        <li><strong>Data e Hora:</strong> 20/11/2025 às 09:30</li>
+                    </ul>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary" id="btn-prev-4">Voltar</button>
+                        <button type="submit" class="btn btn-success" id="btn-confirm">Confirmar Agendamento</button>
+                    </div>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+
+
+    <script src="paciente.js"></script> 
+</body>
+</html>

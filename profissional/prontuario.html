@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuário - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="profissional.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SGHSS VidaPlus</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="agenda.html">Minha Agenda</a></li>
+            <li><a href="#" class="active">Buscar Pacientes</a></li> <li><a href="#">Emitir Prescrição</a></li>
+            <li><a href="#">Laudos Pendentes</a></li>
+            <li><a href="#">Meu Perfil</a></li>
+            <li><a href="../index.html" id="logout-button">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <button id="menu-toggle" class="menu-toggle-button">&#9776;</button>
+            <h1>Prontuário Eletrônico</h1>
+        </header>
+
+        <div class="prontuario-layout">
+
+            <section class="evolution-column">
+                <div class="patient-header card">
+                    <h2>Mariana Almeida</h2>
+                    <p>34 anos | Feminino | ID: P002</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Histórico / Evolução</h2>
+                    <ul class="history-timeline" id="history-timeline">
+                        <li class="timeline-item">
+                            <span class="timeline-date">12/11/2025 - 09:30</span>
+                            <strong>Consulta Atual (Telemedicina) - Dra. Ana Souza</strong>
+                            <p>Paciente relata dores de cabeça persistentes há 2 semanas. Aferida pressão (enviada pelo paciente): 12/8. Sem outros sintomas. [Aguardando anotações da consulta atual...]</p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-date">05/06/2024 - 14:00</span>
+                            <strong>Consulta Rotina - Dr. Ricardo Alves</strong>
+                            <p>Check-up anual. Exames de sangue solicitados. Paciente saudável, sem queixas.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-date">10/01/2022 - 11:15</span>
+                            <strong>Atendimento (Clínica de Bairro)</strong>
+                            <p>Paciente com quadro de virose. Prescrito repouso e hidratação. Atestado de 2 dias.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <aside class="summary-column">
+                <div class="card summary-card">
+                    <h4>Alergias</h4>
+                    <span class="badge badge-danger">Penicilina</span>
+                    <span class="badge badge-warning">Nenhuma outra conhecida</span>
+                    
+                    <h4>Condições Ativas</h4>
+                    <span class="badge badge-secondary">Enxaqueca (Relatada)</span>
+
+                    <h4>Sinais Vitais (Atendimento Atual)</h4>
+                    <p>PA: 12/8 | Temp: 36.5°C | Glicemia: 90 mg/dL</p>
+                </div>
+
+                <div class="card">
+                    <h4>Registrar Evolução (Consulta Atual)</h4>
+                    <form id="evolution-form">
+                        <div class="input-group">
+                            <label for="evolution-notes">Anotações da Consulta</label>
+                            <textarea id="evolution-notes" rows="6" placeholder="Descreva a avaliação, diagnóstico e conduta..."></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="cid">Diagnóstico (CID-10)</label>
+                            <input type="text" id="cid" placeholder="Ex: R51 (Cefaleia)">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar Evolução</button>
+                    </form>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    
+    <script src="profissional.js" id="menu-script"></script> 
+</body>
+</html>

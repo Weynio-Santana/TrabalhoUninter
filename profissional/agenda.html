@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="profissional.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SGHSS VidaPlus</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Minha Agenda</a></li>
+            <li><a href="#">Buscar Pacientes</a></li>
+            <li><a href="prescricao.html">Emitir Prescrição</a></li> 
+            <li><a href="#">Laudos Pendentes</a></li>
+            <li><a href="#">Meu Perfil</a></li>
+            <li><a href="../index.html" id="logout-button">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <button id="menu-toggle" class="menu-toggle-button">&#9776;</button>
+            <h1>Minha Agenda - 12 de Novembro de 2025</h1>
+        </header>
+
+        <div class="dashboard-layout">
+            
+            <section class="agenda-column">
+                <div class="card">
+                    <h2>Pacientes do Dia (8)</h2>
+                    <ul class="patient-queue-list" id="patient-list">
+                        
+                        <li class="patient-item" data-patient-id="p1">
+                            <div class="patient-time">09:00</div>
+                            <div class="patient-info">
+                                <strong>Carlos Silva</strong>
+                                <span>Retorno (Presencial)</span>
+                            </div>
+                            <span class="status status-waiting">Aguardando</span>
+                        </li>
+
+                        <li class="patient-item active" data-patient-id="p2">
+                            <div class="patient-time">09:30</div>
+                            <div class="patient-info">
+                                <strong>Mariana Almeida</strong>
+                                <span>Primeira Consulta (Telemedicina)</span>
+                            </div>
+                            <span class="status status-in-progress">Em Atendimento</span>
+                        </li>
+                        
+                        <li class="patient-item" data-patient-id="p3">
+                            <div class="patient-time">10:00</div>
+                            <div class="patient-info">
+                                <strong>Jorge Nunes</strong>
+                                <span>Exame (Presencial)</span>
+                            </div>
+                            <span class="status status-waiting">Aguardando</span>
+                        </li>
+                        
+                        <li class="patient-item" data-patient-id="p4">
+                            <div class="patient-time">10:30</div>
+                            <div class="patient-info">
+                                <strong>Ana Beatriz Costa</strong>
+                                <span>Retorno (Presencial)</span>
+                            </div>
+                            <span class="status status-waiting">Aguardando</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="prontuario-column">
+                <div class="card">
+                    <h2>Em Atendimento</h2>
+                    
+                    <div id="quick-record-content">
+                        <h3>Mariana Almeida</h3>
+                        <p><strong>ID Paciente:</strong> P002 | <strong>Idade:</strong> 34 anos</p>
+                        <p><strong>Tipo:</strong> Primeira Consulta (Telemedicina)</p>
+                        
+                        <div class="record-section">
+                            <h4>Histórico Rápido</h4>
+                            <p>Paciente relata dores de cabeça persistentes há 2 semanas. Sem histórico de alergias.</p>
+                        </div>
+                        
+                        <div class="record-actions">
+                            <a href="prontuario.html?id=P002" class="btn btn-primary">Abrir Prontuário Completo</a>
+                            <a href="prescricao.html?id=P002" class="btn btn-secondary">Emitir Prescrição</a>
+                        </div>
+                    </div>
+
+                    <div id="quick-record-empty" style="display: none;">
+                        <p>Selecione um paciente na lista de agenda para ver os detalhes.</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../assets/js/global.js"></script>
+
+    <script src="profissional.js"></script>
+</body>
+</html>

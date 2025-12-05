@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - SGHSS VidaPlus</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SGHSS Admin</h3>
+            <p>VidaPlus</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Visão Geral</a></li>
+            <li><a href="#">Gestão de Leitos</a></li>
+            <li><a href="cadastro.html">Gestão de Usuários</a></li>
+            <li><a href="#">Relatórios Financeiros</a></li>
+            <li><a href="#">Controle de Suprimentos</a></li>
+            <li><a href="../index.html" id="logout-button">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <button id="menu-toggle" class="menu-toggle-button">&#9776;</button>
+            <h1>Visão Geral da Instituição</h1>
+        </header>
+
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <h4>Ocupação de Leitos</h4>
+                <span class="kpi-value" id="kpi-leitos">...</span>
+                <span class="kpi-detail">256 / 300 (Total)</span>
+            </div>
+            <div class="kpi-card">
+                <h4>Atendimentos (Hoje)</h4>
+                <span class="kpi-value" id="kpi-atendimentos">...</span>
+                <span class="kpi-detail">Clínica, Labs, Home Care</span>
+            </div>
+            <div class="kpi-card">
+                <h4>Faturamento (Mês)</h4>
+                <span class="kpi-value" id="kpi-faturamento">...</span>
+                <span class="kpi-detail">Previsto: R$ 5.2M</span>
+            </div>
+            <div class="kpi-card">
+                <h4>Novos Pacientes (Mês)</h4>
+                <span class="kpi-value" id="kpi-pacientes">...</span>
+                <span class="kpi-detail">Total: 14.280</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Controle de Leitos (Visão Rápida)</h2>
+            <table class="leitos-table">
+                <thead>
+                    <tr>
+                        <th>Unidade/Setor</th>
+                        <th>Disponíveis</th>
+                        <th>Ocupados</th>
+                        <th>Em Limpeza</th>
+                        <th>Taxa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>UTI Adulto - H. Central</td>
+                        <td>3</td>
+                        <td>47</td>
+                        <td>0</td>
+                        <td><span class="status-badge status-critical">94%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Enfermaria Bloco A</td>
+                        <td>22</td>
+                        <td>58</td>
+                        <td>4</td>
+                        <td><span class="status-badge status-warning">72%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Maternidade - H. Leste</td>
+                        <td>12</td>
+                        <td>18</td>
+                        <td>2</td>
+                        <td><span class="status-badge status-ok">60%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Clínica de Bairro - Sul</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><span class="status-badge status-ok">20%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="card">
+            <h2>Ações Rápidas</h2>
+            <div class="action-buttons">
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar Profissional</a>
+                <button class="btn btn-secondary">Gerar Relatório Financeiro</button>
+                <button class="btn btn-secondary">Auditoria (LGPD)</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="../assets/js/global.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
